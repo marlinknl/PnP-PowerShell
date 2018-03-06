@@ -891,8 +891,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>powershell -NoProfile -ExecutionPolicy RemoteSigned -file $(SolutionDir)PostBuild.ps1 -ProjectDir $(ProjectDir) -ConfigurationName $(ConfigurationName) -TargetDir $(TargetDir) -TargetFileName $(TargetFileName) -SolutionDir $(SolutionDir)
+</PostBuildEvent>
     <ProjectGuid>{1DDE6F0A-CA49-419A-9CE8-A6CA02F43CE0}</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup>
